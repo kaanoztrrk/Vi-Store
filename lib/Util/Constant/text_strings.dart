@@ -41,6 +41,8 @@ class ViTexts {
   //* Auth headings Texts
   static const String loginTitle = "Welcome back,";
   static const String and = "and";
+  static const String submit = "Submit";
+  static const String done = "Done";
   static const String loginSubTitle =
       "Discover Limitless Choices and Unmatched Convenience.";
   static const String signupTitle = "Let's create your account";
@@ -52,11 +54,14 @@ class ViTexts {
       "Your Account Security is Our Priority! We ve Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String confirmEmail = "Verify your email adress";
   static const String confirmEmailSubtitle =
-      "Congratulations! YOur Account Awaits: Verfy Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personal Offers.";
+      "Congratulations! Your Account Awaits: Verfy Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personal Offers.";
   static const String emailNotReceivedMessage =
       "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountCreatedTitle =
       "Your account successfully created";
   static const String yourAccountCreatedSubtitle =
       "Welcome to Your UltimeShopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shoppnig!";
+
+  //*
+  static const String viContinue = "Continue";
 }

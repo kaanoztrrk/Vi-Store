@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:vi_store/Common/Widget/login_divider.dart';
-import 'package:vi_store/Common/Widget/login_social_buttons.dart';
+import 'package:vi_store/Common/Widget/Login_signup/login_divider.dart';
+import 'package:vi_store/Common/Widget/Login_signup/login_social_buttons.dart';
+import 'package:vi_store/Features/Authentication/Views/Signup/verify_email.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 import 'package:vi_store/Util/Constant/text_strings.dart';
@@ -15,15 +16,8 @@ class SignupPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = ViHelpersFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: Icon(Iconsax.arrow_left),
-          color: dark ? AppColors.ligth : AppColors.dark,
-        ),
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(ViSizes.defaultSpace),
@@ -37,7 +31,7 @@ class SignupPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => VerifyEmailPage()),
                   child: const Text(ViTexts.createAccount),
                 ),
               ),
