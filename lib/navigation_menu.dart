@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Features/Store/Views/Home/home.dart';
+import 'package:vi_store/Features/Store/Views/Store/store.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Helpers/helpers_functions.dart';
 
@@ -44,7 +45,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     HomePage(),
-    Container(color: Colors.purple),
+    StorePage(),
     Container(color: Colors.orange),
     Container(color: Colors.blue),
   ];

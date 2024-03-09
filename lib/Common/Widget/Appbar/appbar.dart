@@ -8,7 +8,7 @@ class ViAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ViAppBar(
       {super.key,
       this.title,
-      required this.showBackArrow,
+      this.showBackArrow = false,
       this.leadingIcon,
       this.actions,
       this.leadingOnPressed});

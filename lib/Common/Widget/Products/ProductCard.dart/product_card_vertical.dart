@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Common/Widget/Images/rounded_image.dart';
+import 'package:vi_store/Common/Widget/Texts/vi_brand_title_text_with_verified_icon.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
@@ -81,19 +82,7 @@ class ViProductCardVertical extends StatelessWidget {
                   const ViProductTitleText(
                       title: "White Nike Air Shoes", smallSize: true),
                   const SizedBox(height: ViSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text("Nike",
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: AppColors.primary,
-                        size: ViSizes.iconXs,
-                      )
-                    ],
-                  ),
+                  ViBrandTitleWithVerifiedIcon(title: "Nike"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

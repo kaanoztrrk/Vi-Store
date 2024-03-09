@@ -19,43 +19,59 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Main Headers
             ViPrimaryHeaderContainer(
-                child: Column(
-              children: [
-                const ViHomeAppBar(),
-                const SizedBox(height: ViSizes.spaceBtwSections),
-                ViSearchContainer(
-                  text: 'Seach in Store',
-                  onTap: () {},
-                ),
-                const SizedBox(height: ViSizes.spaceBtwSections),
-                const Padding(
-                  padding: EdgeInsets.only(left: ViSizes.defaultSpace),
-                  child: Column(
-                    children: [
-                      ViSectionHeading(
-                        title: 'Populer Categories',
-                        showActionButton: false,
-                        textColor: Colors.white,
-                      ),
-                      SizedBox(height: ViSizes.spaceBtwItems),
-                      ViHomeCategories()
-                    ],
+              child: Column(
+                children: [
+                  const ViHomeAppBar(),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
+                  ViSearchContainer(
+                    text: 'Seach in Store',
+                    onTap: () {},
                   ),
-                )
-              ],
-            )),
-            const Padding(
+                  const SizedBox(height: ViSizes.spaceBtwSections),
+                  const Padding(
+                    padding: EdgeInsets.only(left: ViSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        // heading
+                        ViSectionHeading(
+                          title: 'Populer Categories',
+                          showActionButton: false,
+                          textColor: Colors.white,
+                        ),
+                        SizedBox(height: ViSizes.spaceBtwItems),
+
+                        // Categories
+                        ViHomeCategories()
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+            Padding(
                 padding: EdgeInsets.all(ViSizes.defaultSpace),
-                child: ViPromoSlider(banners: [
-                  ViImages.promoBanner1,
-                  ViImages.promoBanner2,
-                  ViImages.promoBanner3
-                ])),
-            const SizedBox(height: ViSizes.spaceBtwSections),
-            ViGridLayout(
-                itemCount: 4,
-                itemBuilder: (_, index) => const ViProductCardVertical())
+                child: Column(
+                  children: [
+                    const ViPromoSlider(banners: [
+                      ViImages.promoBanner1,
+                      ViImages.promoBanner2,
+                      ViImages.promoBanner3,
+                    ]),
+                    const SizedBox(height: ViSizes.spaceBtwSections),
+                    //Populer Products
+                    ViSectionHeading(
+                        title: "Popular Products", onPressed: () {}),
+                    const SizedBox(height: ViSizes.spaceBtwSections),
+                    //Grid View
+                    ViGridLayout(
+                        itemCount: 4,
+                        itemBuilder: (_, index) =>
+                            const ViProductCardVertical()),
+                  ],
+                )),
           ],
         ),
       ),

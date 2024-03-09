@@ -10,7 +10,7 @@ class ViRoundedContainer extends StatelessWidget {
     this.child,
     this.radius = ViSizes.cardRadiusLg,
     this.showBorder = false,
-    this.borderColor = AppColors.white,
+    this.borderColor = AppColors.grey,
     this.backgroundColor = AppColors.borderPrimary,
     this.padding,
     this.margin,

@@ -13,13 +13,15 @@ class ViSearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
-    required this.onTap,
+    this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: ViSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class ViSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: ViSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: ViDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(ViSizes.md),
