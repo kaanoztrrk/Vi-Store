@@ -10,7 +10,7 @@ class ViVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = AppColors.white,
-    this.backgroundColor = AppColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -39,9 +39,13 @@ class ViVerticalImageText extends StatelessWidget {
                   borderRadius: BorderRadius.circular(100)),
               child: Center(
                 child: Image(
-                    image: AssetImage(image),
-                    fit: BoxFit.cover,
-                    color: AppColors.dark),
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                  color: backgroundColor ??
+                      (ViHelpersFunctions.isDarkMode(context)
+                          ? AppColors.white
+                          : AppColors.black),
+                ),
               ),
             ),
             const SizedBox(height: ViSizes.spaceBtwItems / 2),

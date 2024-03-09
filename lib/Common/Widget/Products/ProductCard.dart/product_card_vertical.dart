@@ -35,8 +35,8 @@ class ViProductCardVertical extends StatelessWidget {
             // Thumbnail, WishlistButton, Discount Tag
             ViRoundedContainer(
               heigth: 200,
-              padding: const EdgeInsets.all(ViSizes.sm),
-              backgroundColor: dark ? AppColors.grey : AppColors.ligth,
+              //    padding: const EdgeInsets.all(ViSizes.sm),
+              backgroundColor: dark ? AppColors.darkerGrey : AppColors.ligth,
               child: Stack(
                 children: [
                   const ViRoundedImage(
