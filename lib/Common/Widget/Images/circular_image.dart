@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../Util/Constant/colors.dart';
-import '../../../Util/Constant/image_strings.dart';
 import '../../../Util/Constant/sizes.dart';
 import '../../../Util/Helpers/helpers_functions.dart';
 
@@ -30,7 +29,7 @@ class ViCircularImage extends StatelessWidget {
     return Container(
         width: width,
         height: heigth,
-        padding: EdgeInsets.all(ViSizes.sm),
+        padding: const EdgeInsets.all(ViSizes.sm),
         decoration: BoxDecoration(
           color: backgroundColor ??
               (ViHelpersFunctions.isDarkMode(context)

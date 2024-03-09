@@ -17,7 +17,7 @@ class ViPrimaryHeaderContainer extends StatelessWidget {
     return ViCurvedEdgeWidget(
       child: Container(
         color: AppColors.primary,
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         child: SizedBox(
           height: 400,
           child: Stack(

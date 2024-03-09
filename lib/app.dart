@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: ViAppTheme.ligthTheme,
       darkTheme: ViAppTheme.darkTheme,
-      home: OnBoardingPage(),
+      home: const OnBoardingPage(),
     );
   }
 }

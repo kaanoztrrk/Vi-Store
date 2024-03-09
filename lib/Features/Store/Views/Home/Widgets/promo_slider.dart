@@ -5,7 +5,6 @@ import 'package:vi_store/Util/Constant/colors.dart';
 
 import '../../../../../Common/Widget/Custom_shapes/Containers/circular_container.dart';
 import '../../../../../Common/Widget/Images/rounded_image.dart';
-import '../../../../../Util/Constant/image_strings.dart';
 import '../../../../../Util/Constant/sizes.dart';
 import '../../../Controllers/home_controller.dart';
 
@@ -36,7 +35,7 @@ class ViPromoSlider extends StatelessWidget {
             children: [
               for (int i = 0; i < banners.length; i++)
                 ViCircularContainer(
-                  margin: EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 10),
                   width: 20,
                   heigth: 4,
                   backgroundColor: controller.carouselCurrentIndex.value == i

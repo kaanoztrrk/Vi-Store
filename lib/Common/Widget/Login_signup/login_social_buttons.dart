@@ -26,7 +26,7 @@ class ViSocialButtons extends StatelessWidget {
                   height: ViSizes.iconMd,
                   image: AssetImage(ViImages.googleLogo))),
         ),
-        SizedBox(width: ViSizes.spaceBtwItems),
+        const SizedBox(width: ViSizes.spaceBtwItems),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: AppColors.grey),

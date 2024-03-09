@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
             ),
 
             Padding(
-                padding: EdgeInsets.all(ViSizes.defaultSpace),
+                padding: const EdgeInsets.all(ViSizes.defaultSpace),
                 child: Column(
                   children: [
                     const ViPromoSlider(banners: [

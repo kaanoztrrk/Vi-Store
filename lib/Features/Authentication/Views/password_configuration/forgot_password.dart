@@ -14,7 +14,7 @@ class ForgotPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: EdgeInsets.all(ViSizes.defaultSpace),
+        padding: const EdgeInsets.all(ViSizes.defaultSpace),
         child: Column(
           children: [
             // Headings

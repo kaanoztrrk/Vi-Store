@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Login_signup/login_divider.dart';
 import 'package:vi_store/Common/Widget/Login_signup/login_social_buttons.dart';
 import 'package:vi_store/Features/Authentication/Views/Signup/verify_email.dart';
-import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 import 'package:vi_store/Util/Constant/text_strings.dart';
-import 'package:vi_store/Util/Helpers/helpers_functions.dart';
 
 import 'Widget/signup_form.dart';
 
@@ -31,7 +28,7 @@ class SignupPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => VerifyEmailPage()),
+                  onPressed: () => Get.to(() => const VerifyEmailPage()),
                   child: const Text(ViTexts.createAccount),
                 ),
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../Util/Constant/colors.dart';
-import '../../../Util/Constant/image_strings.dart';
 import '../../../Util/Constant/sizes.dart';
 
 class ViRoundedImage extends StatelessWidget {

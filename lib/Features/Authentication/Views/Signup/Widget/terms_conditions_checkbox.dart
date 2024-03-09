@@ -25,7 +25,7 @@ class ViTermAndConditionCheckbox extends StatelessWidget {
               text: '${ViTexts.iAgreeTo} ',
               style: Theme.of(context).textTheme.bodySmall),
           TextSpan(
-              text: '${ViTexts.privacyPolicy}',
+              text: ViTexts.privacyPolicy,
               style: Theme.of(context).textTheme.bodySmall!.apply(
                   color: dark ? AppColors.ligth : AppColors.primary,
                   decoration: TextDecoration.underline,
@@ -34,7 +34,7 @@ class ViTermAndConditionCheckbox extends StatelessWidget {
               text: ' ${ViTexts.and} ',
               style: Theme.of(context).textTheme.bodySmall),
           TextSpan(
-              text: '${ViTexts.termsofUse}',
+              text: ViTexts.termsofUse,
               style: Theme.of(context).textTheme.bodySmall!.apply(
                   color: dark ? AppColors.ligth : AppColors.primary,
                   decoration: TextDecoration.underline,

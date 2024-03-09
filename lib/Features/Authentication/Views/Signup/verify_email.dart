@@ -24,13 +24,13 @@ class VerifyEmailPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ViSizes.defaultSpace),
+          padding: const EdgeInsets.all(ViSizes.defaultSpace),
           child: Column(
             children: [
               // Image
               Image(
                   width: ViHelpersFunctions.screenWidth() * 0.6,
-                  image: AssetImage(ViImages.deliveredEmilIllustration)),
+                  image: const AssetImage(ViImages.deliveredEmilIllustration)),
               const SizedBox(height: ViSizes.spaceBtwSections),
               // Title & Subtitle
               Text(
@@ -62,13 +62,13 @@ class VerifyEmailPage extends StatelessWidget {
                         title: ViTexts.yourAccountCreatedTitle,
                         subtitle: ViTexts.yourAccountCreatedSubtitle,
                         onPressed: () => Get.to(() => const LoginPage()))),
-                    child: Text(ViTexts.viContinue)),
+                    child: const Text(ViTexts.viContinue)),
               ),
               const SizedBox(height: ViSizes.spaceBtwItems),
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () {}, child: Text(ViTexts.resendEmail)),
+                    onPressed: () {}, child: const Text(ViTexts.resendEmail)),
               )
             ],
           ),

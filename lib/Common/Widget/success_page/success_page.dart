@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:vi_store/Common/Styles/spacing_styles.dart';
-import 'package:vi_store/Features/Authentication/Views/Login/login.dart';
 
-import '../../../Util/Constant/image_strings.dart';
 import '../../../Util/Constant/sizes.dart';
 import '../../../Util/Constant/text_strings.dart';
 import '../../../Util/Helpers/helpers_functions.dart';

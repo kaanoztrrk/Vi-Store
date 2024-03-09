@@ -1,6 +1,6 @@
 class ViValidator {
   static String? validateEmail(String value) {
-    if (value == null || value.isEmpty) {
+    if (value.isEmpty) {
       return 'Email is required';
     }
     final emailRegExp = RegExp(r'^[\w-\.]+@([\w*]+\.)+[\w-]{2,4}$');
@@ -31,7 +31,7 @@ class ViValidator {
   }
 
   static String? validatePhoneNumber(String value) {
-    if (value == null || value.isEmpty) {
+    if (value.isEmpty) {
       return 'phoneNumber is required';
     }
     final phoneReExp = RegExp(r'^\d{10}$');

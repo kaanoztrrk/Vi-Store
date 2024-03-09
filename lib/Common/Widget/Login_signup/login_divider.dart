@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../Util/Constant/colors.dart';
-import '../../../Util/Constant/text_strings.dart';
 import '../../../Util/Helpers/helpers_functions.dart';
 
 class ViFormDivider extends StatelessWidget {

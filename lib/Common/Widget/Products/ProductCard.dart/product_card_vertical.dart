@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Common/Widget/Images/rounded_image.dart';
@@ -72,7 +71,7 @@ class ViProductCardVertical extends StatelessWidget {
 
             // -- Details
 
-            Spacer(),
+            const Spacer(),
 
             Padding(
               padding: const EdgeInsets.only(left: ViSizes.sm),
@@ -82,13 +81,13 @@ class ViProductCardVertical extends StatelessWidget {
                   const ViProductTitleText(
                       title: "White Nike Air Shoes", smallSize: true),
                   const SizedBox(height: ViSizes.spaceBtwItems / 2),
-                  ViBrandTitleWithVerifiedIcon(title: "Nike"),
+                  const ViBrandTitleWithVerifiedIcon(title: "Nike"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // Price
 
-                      ViProductPriceText(price: "35.6", isLarge: true),
+                      const ViProductPriceText(price: "35.6", isLarge: true),
 
                       Container(
                         decoration: const BoxDecoration(

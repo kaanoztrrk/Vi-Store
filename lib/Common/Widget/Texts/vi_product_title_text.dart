@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../Util/Constant/sizes.dart';
 
 class ViProductTitleText extends StatelessWidget {
   const ViProductTitleText({

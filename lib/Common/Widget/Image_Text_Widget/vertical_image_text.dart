@@ -44,7 +44,7 @@ class ViVerticalImageText extends StatelessWidget {
                     color: AppColors.dark),
               ),
             ),
-            SizedBox(height: ViSizes.spaceBtwItems / 2),
+            const SizedBox(height: ViSizes.spaceBtwItems / 2),
             SizedBox(
               width: 55,
               child: Text(

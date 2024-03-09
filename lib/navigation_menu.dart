@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Features/Store/Views/Home/home.dart';
 import 'package:vi_store/Features/Store/Views/Store/store.dart';
+import 'package:vi_store/Features/Store/Views/wishlist/wishlist.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Helpers/helpers_functions.dart';
 
@@ -44,9 +45,9 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    HomePage(),
-    StorePage(),
-    Container(color: Colors.orange),
+    const HomePage(),
+    const StorePage(),
+    const FavouritePage(),
     Container(color: Colors.blue),
   ];
 }

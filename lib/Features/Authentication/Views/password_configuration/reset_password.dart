@@ -17,16 +17,16 @@ class ResetPassword extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.back(), icon: Icon(CupertinoIcons.clear))
+              onPressed: () => Get.back(), icon: const Icon(CupertinoIcons.clear))
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(ViSizes.defaultSpace),
+        padding: const EdgeInsets.all(ViSizes.defaultSpace),
         child: Column(
           children: [
             Image(
                 width: ViHelpersFunctions.screenWidth() * 0.6,
-                image: AssetImage(ViImages.deliveredEmilIllustration)),
+                image: const AssetImage(ViImages.deliveredEmilIllustration)),
             const SizedBox(height: ViSizes.spaceBtwSections),
             // Title & Subtitle
             Text(

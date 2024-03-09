@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               // Logo, Title & SubTitle
-              ViLoginHeader(),
+              const ViLoginHeader(),
 
               // Form
               const ViLoginForm(),

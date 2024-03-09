@@ -20,7 +20,7 @@ class OnBoardingNextButton extends StatelessWidget {
         bottom: ViDeviceUtils.getBottomNavigationBarHeigth(),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            shape: CircleBorder(),
+            shape: const CircleBorder(),
             backgroundColor: dark ? AppColors.primary : AppColors.black,
           ),
           onPressed: () => OnBoardingController.instance.nextPage(),
