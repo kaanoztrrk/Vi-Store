@@ -27,21 +27,20 @@ class ViCircularImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: width,
-        height: heigth,
-        padding: const EdgeInsets.all(ViSizes.sm),
-        decoration: BoxDecoration(
+      width: width,
+      height: heigth,
+      padding: const EdgeInsets.all(ViSizes.sm),
+      decoration: BoxDecoration(
           color: backgroundColor ??
               (ViHelpersFunctions.isDarkMode(context)
                   ? AppColors.black
                   : AppColors.white),
           borderRadius: BorderRadius.circular(100),
-        ),
-        child: Image(
-          image: isNetworkImage
-              ? NetworkImage(image)
-              : AssetImage(image) as ImageProvider,
-          color: overplayColor,
-        ));
+          image: DecorationImage(
+            image: isNetworkImage
+                ? NetworkImage(image)
+                : AssetImage(image) as ImageProvider,
+          )),
+    );
   }
 }

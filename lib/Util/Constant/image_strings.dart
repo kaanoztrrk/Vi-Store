@@ -37,7 +37,15 @@ class ViImages {
   static const String promoBanner3 = "assets/Images/banners/promo_banner_3.jpg";
 
   // * Profile
-  static const String user = 'assets/Images/user/user.png';
+  static const String user = 'assets/Images/user/user.jpg';
+
+  // * Review
+  static const String reviewImage1 =
+      'assets/Images/review/review_profile_image_1.jpg';
+  static const String reviewImage2 =
+      'assets/Images/review/review_profile_image_2.jpg';
+  static const String reviewImage3 =
+      'assets/Images/review/review_profile_image_3.jpg';
 
   // * Product
   static const String productImage_1 = "assets/Images/products/product_1.png";
