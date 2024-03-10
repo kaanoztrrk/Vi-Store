@@ -46,7 +46,8 @@ class HomePage extends StatelessWidget {
                         ViHomeCategories()
                       ],
                     ),
-                  )
+                  ),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
                 ],
               ),
             ),

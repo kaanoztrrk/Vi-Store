@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:vi_store/Features/Personalization/View/Settings/settings.dart';
 import 'package:vi_store/Features/Store/Views/Home/home.dart';
 import 'package:vi_store/Features/Store/Views/Store/store.dart';
 import 'package:vi_store/Features/Store/Views/wishlist/wishlist.dart';
@@ -48,6 +49,6 @@ class NavigationController extends GetxController {
     const HomePage(),
     const StorePage(),
     const FavouritePage(),
-    Container(color: Colors.blue),
+    const SettingsPage(),
   ];
 }

@@ -36,6 +36,9 @@ class ViImages {
   static const String promoBanner2 = "assets/Images/banners/promo_banner_2.jpg";
   static const String promoBanner3 = "assets/Images/banners/promo_banner_3.jpg";
 
+  // * Profile
+  static const String user = 'assets/Images/user/user.png';
+
   // * Product
   static const String productImage_1 = "assets/Images/products/product_1.png";
   static const String productImage_2 = "assets/Images/products/product_2.png";

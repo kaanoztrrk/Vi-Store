@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/appbar_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/bottom_sheet_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/checkbox_theme.dart';
@@ -37,7 +38,7 @@ class ViAppTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: AppColors.black,
     textTheme: ViTextTheme.darkTextTheme,
     elevatedButtonTheme: ViElevatedButtonTheme.darkElevtedButtonTheme,
     appBarTheme: ViAppbarTheme.darkAppBarTheme,
