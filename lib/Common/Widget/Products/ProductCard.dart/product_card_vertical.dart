@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Common/Widget/Images/rounded_image.dart';
 import 'package:vi_store/Common/Widget/Texts/vi_brand_title_text_with_verified_icon.dart';
+import 'package:vi_store/Features/Store/Views/Poduct_Details/product_details.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
@@ -20,7 +22,7 @@ class ViProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = ViHelpersFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
