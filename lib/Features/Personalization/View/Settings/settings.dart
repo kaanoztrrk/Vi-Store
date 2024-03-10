@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/primary_header_container.dart';
@@ -6,6 +7,7 @@ import 'package:vi_store/Common/Widget/Icons/vi_circular_icon.dart';
 import 'package:vi_store/Common/Widget/Images/circular_image.dart';
 import 'package:vi_store/Common/Widget/List_Tiles/settings_menu_tile.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
+import 'package:vi_store/Features/Personalization/View/Address/address.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 
@@ -50,7 +52,7 @@ class SettingsPage extends StatelessWidget {
 
                   // Account Settings
                   ViSettingsMenuTile(
-                      onTap: () {},
+                      onTap: () => Get.to(() => const UserAddressPage()),
                       icon: Iconsax.safe_home,
                       title: "My Addresses",
                       subTitle: "Set shopping delivery address"),
