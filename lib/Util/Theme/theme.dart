@@ -3,11 +3,11 @@ import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/appbar_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/bottom_sheet_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/checkbox_theme.dart';
-import 'package:vi_store/Util/Theme/Custom_Themes.dart/chip_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/outlined_button_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/text_field_theme.dart';
 import 'package:vi_store/Util/Theme/Custom_Themes.dart/text_theme.dart';
 
+import 'Custom_Themes.dart/chipTheme.dart';
 import 'Custom_Themes.dart/elevated_button_theme.dart';
 
 class ViAppTheme {

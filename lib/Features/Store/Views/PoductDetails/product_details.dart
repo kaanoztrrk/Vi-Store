@@ -1,0 +1,93 @@
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
+import 'package:vi_store/Common/Widget/Custom_shapes/Curved_edges/curved_edges_widget.dart';
+import 'package:vi_store/Common/Widget/Icons/vi_circular_icon.dart';
+import 'package:vi_store/Common/Widget/Images/rounded_image.dart';
+import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
+import 'package:vi_store/Features/Store/Views/PoductDetails/Widget/product_attributes.dart';
+import 'package:vi_store/Features/Store/Views/PoductDetails/Widget/product_meta_data.dart';
+import 'package:vi_store/Util/Constant/colors.dart';
+import 'package:vi_store/Util/Constant/image_strings.dart';
+import 'package:vi_store/Util/Constant/sizes.dart';
+import 'package:vi_store/Util/Helpers/helpers_functions.dart';
+
+import 'Widget/bottom_add_to_cart_widget.dart';
+import 'Widget/product_details_image_slider.dart';
+import 'Widget/product_rating_and_share.dart';
+import 'package:readmore/readmore.dart';
+
+class ProductDetails extends StatelessWidget {
+  const ProductDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    //  final dark = ViHelpersFunctions.isDarkMode(context);
+    return Scaffold(
+      bottomNavigationBar: const ViBottomAddToCart(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const ViProductImageSlider(),
+            Padding(
+              padding: const EdgeInsets.only(
+                right: ViSizes.defaultSpace,
+                left: ViSizes.defaultSpace,
+                bottom: ViSizes.defaultSpace,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Rating & Share Button
+                  const ViRatingandShare(),
+                  // Price title stock brand
+                  const ProductMetaDeta(),
+                  // Attributes
+                  const ProductAttributes(),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
+                  // Cectout Button
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        onPressed: () {}, child: const Text("Checkout")),
+                  ),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
+
+                  const ViSectionHeading(
+                      title: 'Description', showActionButton: false),
+                  const SizedBox(height: ViSizes.spaceBtwItems),
+                  const ReadMoreText(
+                    'This is a Product description for white Nike sport shoes. There are more thing tht can be added but i am just praticing and nothing else.',
+                    trimLines: 2,
+                    trimMode: TrimMode.Line,
+                    trimCollapsedText: ' Show more',
+                    trimExpandedText: ' Less',
+                    moreStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    lessStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  ),
+
+                  const Divider(),
+                  const SizedBox(height: ViSizes.spaceBtwItems),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const ViSectionHeading(
+                          title: 'Reviews (201)', showActionButton: false),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Iconsax.arrow_right_3, size: 18)),
+                    ],
+                  ),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

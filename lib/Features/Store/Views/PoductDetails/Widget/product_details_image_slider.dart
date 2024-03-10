@@ -28,14 +28,16 @@ class ViProductImageSlider extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(ViSizes.productImageRadius * 2),
                   child: Center(
-                      child: Image(image: AssetImage(ViImages.productImage_1))),
+                      child: Image(
+                    image: AssetImage(ViImages.productImage_1),
+                  )),
                 )),
             Positioned(
               left: 10,
               right: 0,
               bottom: 30,
               child: SizedBox(
-                height: 80,
+                height: 70,
                 width: ViHelpersFunctions.screenWidth(),
                 child: ListView.separated(
                   itemCount: 8,
@@ -46,7 +48,7 @@ class ViProductImageSlider extends StatelessWidget {
                       const SizedBox(width: ViSizes.spaceBtwItems),
                   itemBuilder: (_, index) => ViRoundedImage(
                     fit: BoxFit.cover,
-                    width: 80,
+                    width: 70,
                     backgroundColor: dark ? AppColors.dark : AppColors.white,
                     border: Border.all(color: AppColors.primary),
                     imageUrl: ViImages.productImage_3,
