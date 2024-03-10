@@ -104,17 +104,17 @@ class ProductAttributes extends StatelessWidget {
               spacing: 8,
               children: [
                 ViChoiceChip(
-                  text: "EU 34",
+                  text: "34",
                   selected: true,
                   onSelected: (value) {},
                 ),
                 ViChoiceChip(
-                  text: "EU 36",
+                  text: "36",
                   selected: false,
                   onSelected: (value) {},
                 ),
                 ViChoiceChip(
-                  text: "EU 38",
+                  text: "44",
                   selected: false,
                   onSelected: (value) {},
                 ),

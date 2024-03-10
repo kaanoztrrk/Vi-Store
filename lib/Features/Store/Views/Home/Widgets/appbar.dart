@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vi_store/Features/Store/Views/Cart/cart.dart';
 
 import '../../../../../Common/Widget/Appbar/appbar.dart';
-import '../../../../../Common/Widget/Products/cart_menu_icon.dart';
+import '../../../../../Common/Widget/Products/cart/cart_menu_icon.dart';
 import '../../../../../Util/Constant/colors.dart';
 import '../../../../../Util/Constant/text_strings.dart';
 
@@ -31,7 +33,6 @@ class ViHomeAppBar extends StatelessWidget {
       ),
       actions: [
         ViCardCounterIcon(
-          onPressed: () {},
           iconColor: AppColors.white,
         )
       ],

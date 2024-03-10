@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
 import 'package:vi_store/Common/Widget/Appbar/tabbar.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/search_container.dart';
-import 'package:vi_store/Common/Widget/Products/cart_menu_icon.dart';
+import 'package:vi_store/Common/Widget/Products/cart/cart_menu_icon.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
 import 'package:vi_store/Common/Widget/layouts/grid_layout.dart';
 import 'package:vi_store/Features/Store/Views/Store/Widget/ViCategoryTab.dart';
@@ -23,7 +23,7 @@ class StorePage extends StatelessWidget {
         appBar: ViAppBar(
             title: Text("Store",
                 style: Theme.of(context).textTheme.headlineMedium),
-            actions: [ViCardCounterIcon(onPressed: () {})]),
+            actions: [ViCardCounterIcon()]),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
             return [
