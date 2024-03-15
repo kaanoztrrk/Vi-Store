@@ -39,6 +39,11 @@ class ViImages {
   // * Profile
   static const String user = 'assets/Images/user/user.jpg';
 
+  // * Paymnet
+  static const String mastercard = 'assets/Icons/payment/mastercard.png';
+  static const String visa = 'assets/Icons/payment/visa.png';
+  static const String successPaymentIcon =
+      'assets/Icons/payment/success_payment.png';
   // * Review
   static const String reviewImage1 =
       'assets/Images/review/review_profile_image_1.jpg';

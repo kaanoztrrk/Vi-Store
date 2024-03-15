@@ -8,6 +8,7 @@ import 'package:vi_store/Common/Widget/Images/circular_image.dart';
 import 'package:vi_store/Common/Widget/List_Tiles/settings_menu_tile.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
 import 'package:vi_store/Features/Personalization/View/Address/address.dart';
+import 'package:vi_store/Features/Store/Views/Order/order.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 
@@ -62,10 +63,11 @@ class SettingsPage extends StatelessWidget {
                       title: "My Cart",
                       subTitle: "Add, remove products and move to checkout"),
                   ViSettingsMenuTile(
-                      onTap: () {},
+                      onTap: () => Get.to(() => const OrderPage()),
                       icon: Iconsax.bag_tick,
                       title: "My Orders",
                       subTitle: "In-progress and Completed Orders"),
+
                   ViSettingsMenuTile(
                       onTap: () {},
                       icon: Iconsax.bank,
