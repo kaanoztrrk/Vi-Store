@@ -20,7 +20,7 @@ class ViRatingandShare extends StatelessWidget {
             Text.rich(TextSpan(children: [
               TextSpan(
                   text: '5.0', style: Theme.of(context).textTheme.bodyLarge),
-              TextSpan(text: "(201)")
+              const TextSpan(text: "(201)")
             ])),
           ],
         ),

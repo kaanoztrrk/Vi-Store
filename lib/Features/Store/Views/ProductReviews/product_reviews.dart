@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
-import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
-import 'package:vi_store/Util/Device/device_utility.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../../../../Common/Widget/Products/Ratings/ratings_indicator.dart';
-import 'Widget/progress_indicator_and_rating.dart';
 import 'Widget/rating_progress_indicator.dart';
 import 'Widget/user_review_card.dart';
 

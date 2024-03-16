@@ -19,7 +19,7 @@ class ViCartItems extends StatelessWidget {
           const SizedBox(height: ViSizes.spaceBtwSections),
       itemBuilder: (_, index) => Column(
         children: [
-          ViCartItem(),
+          const ViCartItem(),
           if (showAddRemoveButtons)
             const SizedBox(height: ViSizes.spaceBtwItems),
           if (showAddRemoveButtons)

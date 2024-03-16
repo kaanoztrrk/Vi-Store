@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Common/Widget/Products/Ratings/ratings_indicator.dart';
-import 'package:vi_store/Features/Store/Views/ProductReviews/Widget/progress_indicator_and_rating.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
@@ -34,24 +33,24 @@ class UserReviewCard extends StatelessWidget {
         // Review
         Row(
           children: [
-            ViRatingBarIndicator(rating: 4),
+            const ViRatingBarIndicator(rating: 4),
             const SizedBox(width: ViSizes.spaceBtwItems),
             Text("01 Nov, 2023", style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
 
         const SizedBox(height: ViSizes.spaceBtwItems),
-        ReadMoreText(
+        const ReadMoreText(
           'The user interface of app is quite  intutive. I was able to navigate and make purchases seamlessly. Great job!',
           trimLines: 1,
           trimMode: TrimMode.Line,
           trimExpandedText: ' Show less',
           trimCollapsedText: ' Show more',
-          moreStyle: const TextStyle(
+          moreStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: AppColors.primary),
-          lessStyle: const TextStyle(
+          lessStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: AppColors.primary),
@@ -62,7 +61,7 @@ class UserReviewCard extends StatelessWidget {
         ViRoundedContainer(
           backgroundColor: dark ? AppColors.darkerGrey : AppColors.grey,
           child: Padding(
-            padding: EdgeInsets.all(ViSizes.md),
+            padding: const EdgeInsets.all(ViSizes.md),
             child: Column(
               children: [
                 Row(
@@ -74,17 +73,17 @@ class UserReviewCard extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
-                ReadMoreText(
+                const ReadMoreText(
                   'The user interface of app is quite  intutive. I was able to navigate and make purchases seamlessly. Great job!',
                   trimLines: 2,
                   trimMode: TrimMode.Line,
                   trimExpandedText: ' Show less',
                   trimCollapsedText: ' Show more',
-                  moreStyle: const TextStyle(
+                  moreStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primary),
-                  lessStyle: const TextStyle(
+                  lessStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primary),

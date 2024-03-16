@@ -22,7 +22,7 @@ class ViProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = ViHelpersFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () => Get.to(ProductDetails()),
+      onTap: () => Get.to(const ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

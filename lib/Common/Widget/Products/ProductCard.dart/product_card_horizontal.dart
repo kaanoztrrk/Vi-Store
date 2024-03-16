@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:vi_store/Common/Styles/shadow.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Common/Widget/Images/rounded_image.dart';
 import 'package:vi_store/Common/Widget/Texts/vi_brand_title_text_with_verified_icon.dart';
@@ -30,11 +29,11 @@ class ViProductCardHorizontal extends StatelessWidget {
         children: [
           ViRoundedContainer(
             heigth: 120,
-            padding: EdgeInsets.all(ViSizes.sm),
+            padding: const EdgeInsets.all(ViSizes.sm),
             backgroundColor: dark ? AppColors.dark : AppColors.ligth,
             child: Stack(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 120,
                   height: 120,
                   child: ViRoundedImage(
@@ -67,26 +66,26 @@ class ViProductCardHorizontal extends StatelessWidget {
           SizedBox(
             width: 172,
             child: Padding(
-              padding: EdgeInsets.only(top: ViSizes.sm, left: ViSizes.sm),
+              padding: const EdgeInsets.only(top: ViSizes.sm, left: ViSizes.sm),
               child: Column(
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ViProductTitleText(
                           title: 'White Nike Half Sleeves Sneakers',
                           smallSize: true),
-                      const SizedBox(width: ViSizes.spaceBtwItems / 2),
+                      SizedBox(width: ViSizes.spaceBtwItems / 2),
                       ViBrandTitleWithVerifiedIcon(title: 'Nike')
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Flexible(child: ViProductPriceText(price: '256.0')),
+                      const Flexible(child: ViProductPriceText(price: '256.0')),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: AppColors.dark,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(ViSizes.cardRadiusMd),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
@@ -25,8 +24,8 @@ class ViOrderListItems extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Iconsax.ship),
-                  SizedBox(width: ViSizes.spaceBtwItems / 2),
+                  const Icon(Iconsax.ship),
+                  const SizedBox(width: ViSizes.spaceBtwItems / 2),
                   Expanded(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -42,17 +41,17 @@ class ViOrderListItems extends StatelessWidget {
                   ),
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(Iconsax.arrow_right_34, size: ViSizes.iconSm))
+                      icon: const Icon(Iconsax.arrow_right_34, size: ViSizes.iconSm))
                 ],
               ),
-              SizedBox(height: ViSizes.spaceBtwItems),
+              const SizedBox(height: ViSizes.spaceBtwItems),
               Row(
                 children: [
                   Expanded(
                     child: Row(
                       children: [
-                        Icon(Iconsax.ship),
-                        SizedBox(width: ViSizes.spaceBtwItems / 2),
+                        const Icon(Iconsax.ship),
+                        const SizedBox(width: ViSizes.spaceBtwItems / 2),
                         Expanded(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -73,8 +72,8 @@ class ViOrderListItems extends StatelessWidget {
                   Expanded(
                     child: Row(
                       children: [
-                        Icon(Iconsax.ship),
-                        SizedBox(width: ViSizes.spaceBtwItems / 2),
+                        const Icon(Iconsax.ship),
+                        const SizedBox(width: ViSizes.spaceBtwItems / 2),
                         Expanded(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,

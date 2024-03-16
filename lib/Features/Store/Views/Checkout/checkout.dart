@@ -35,30 +35,30 @@ class CheckoutPage extends StatelessWidget {
               const SizedBox(height: ViSizes.spaceBtwSections),
 
               // Coupon TextField
-              ViCouponCode(),
+              const ViCouponCode(),
               const SizedBox(height: ViSizes.spaceBtwSections),
 
               // Billing Section
               ViRoundedContainer(
                 showBorder: true,
-                padding: EdgeInsets.all(ViSizes.md),
+                padding: const EdgeInsets.all(ViSizes.md),
                 backgroundColor: dark ? AppColors.dark : AppColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     // Pricing
                     ViBillingAmountSections(),
-                    const SizedBox(height: ViSizes.spaceBtwItems),
+                    SizedBox(height: ViSizes.spaceBtwItems),
 
                     // Divider
                     Divider(),
-                    const SizedBox(height: ViSizes.spaceBtwSections),
+                    SizedBox(height: ViSizes.spaceBtwSections),
 
                     // Payment Methods
                     ViBillingPaymentSection(),
-                    const SizedBox(height: ViSizes.spaceBtwSections),
+                    SizedBox(height: ViSizes.spaceBtwSections),
                     // Address
                     ViBillingAddressSection(),
-                    const SizedBox(height: ViSizes.spaceBtwSections),
+                    SizedBox(height: ViSizes.spaceBtwSections),
                   ],
                 ),
               )
@@ -75,7 +75,7 @@ class CheckoutPage extends StatelessWidget {
                   subtitle: "Your item will be shipped",
                   onPressed: () => Get.offAll(() => const NavigatorMenu()),
                 )),
-            child: Text('Checkout \$256.0')),
+            child: const Text('Checkout \$256.0')),
       ),
     );
   }

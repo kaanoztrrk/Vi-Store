@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "864959251314",
+    "project_id": "ecommerceapp-45684",
+    "storage_bucket": "ecommerceapp-45684.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864959251314:android:dad6f342e07980d78153eb",
+        "android_client_info": {
+          "package_name": "com.example.vi_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864959251314-fg3bi7sm441i883fckk8q7cerdbjj26f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vi_store",
+            "certificate_hash": "01d7567351016f2361565bfd8602a2cff0212dba"
+          }
+        },
+        {
+          "client_id": "864959251314-1404uod3v23ukrppuivbav3f5q7h88ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALeTm2yerevqE7NruemCZosHc4rpyStYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864959251314-1404uod3v23ukrppuivbav3f5q7h88ht.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "864959251314-anf4v2dqrhgddki5ql47so0cmepvubqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.viStore.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

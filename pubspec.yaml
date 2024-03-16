@@ -38,10 +38,10 @@ dependencies:
 
   #Utility Packages
   intl: ^0.19.0
-  http: ^1.2.0
+  http: ^1.1.2
   logger: ^2.1.0
   url_launcher: ^6.2.5
-  flutter_native_splash: ^2.3.11
+  flutter_native_splash: ^2.3.10
   smooth_page_indicator: ^1.1.0
 
   #Icons
@@ -51,11 +51,15 @@ dependencies:
   #State Management
   get: ^4.6.6
   get_storage: ^2.1.1
+  
 
   #Product Specific
   carousel_slider: ^4.2.1
   readmore: ^2.2.0
   flutter_rating_bar: ^4.0.1
+
+  #firebase
+  firebase_core: ^2.23.0
 
 
   

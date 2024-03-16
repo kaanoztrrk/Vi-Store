@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
 import 'package:vi_store/Common/Widget/Appbar/tabbar.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/search_container.dart';
 import 'package:vi_store/Common/Widget/Products/cart/cart_menu_icon.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
 import 'package:vi_store/Common/Widget/layouts/grid_layout.dart';
+import 'package:vi_store/Features/Store/Views/Brand/all_brands.dart';
 import 'package:vi_store/Features/Store/Views/Store/Widget/ViCategoryTab.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
@@ -23,7 +25,7 @@ class StorePage extends StatelessWidget {
         appBar: ViAppBar(
             title: Text("Store",
                 style: Theme.of(context).textTheme.headlineMedium),
-            actions: [ViCardCounterIcon()]),
+            actions: const [ViCardCounterIcon()]),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
             return [
@@ -51,7 +53,9 @@ class StorePage extends StatelessWidget {
                         ),
                         const SizedBox(height: ViSizes.spaceBtwSections),
                         ViSectionHeading(
-                            title: "Featured Brands", onPressed: () {}),
+                            title: "Featured Brands",
+                            onPressed: () =>
+                                Get.to(() => const AllBrandsPage())),
                         const SizedBox(height: ViSizes.spaceBtwItems / 1.5),
                         ViGridLayout(
                           itemCount: 4,

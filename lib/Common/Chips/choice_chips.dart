@@ -31,9 +31,9 @@ class ViChoiceChip extends StatelessWidget {
                 heigth: 50,
                 backgroundColor: ViHelpersFunctions.getColor(text)!)
             : null,
-        shape: isColor ? CircleBorder() : null,
-        labelPadding: isColor ? EdgeInsets.all(0) : null,
-        padding: isColor ? EdgeInsets.all(0) : null,
+        shape: isColor ? const CircleBorder() : null,
+        labelPadding: isColor ? const EdgeInsets.all(0) : null,
+        padding: isColor ? const EdgeInsets.all(0) : null,
         backgroundColor: isColor ? ViHelpersFunctions.getColor(text)! : null,
       ),
     );

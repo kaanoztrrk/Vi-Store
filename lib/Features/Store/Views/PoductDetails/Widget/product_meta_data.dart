@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/rounded_Container.dart';
-import 'package:vi_store/Common/Widget/Icons/vi_circular_icon.dart';
 import 'package:vi_store/Common/Widget/Images/circular_image.dart';
 import 'package:vi_store/Common/Widget/Texts/vi_brand_title_text_with_verified_icon.dart';
 import 'package:vi_store/Common/Widget/Texts/vi_product_price_text.dart';
@@ -62,7 +61,7 @@ class ProductMetaDeta extends StatelessWidget {
               overplayColor: dark ? AppColors.white : AppColors.black,
               image: ViImages.shoes,
             ),
-            ViBrandTitleWithVerifiedIcon(
+            const ViBrandTitleWithVerifiedIcon(
                 title: 'Nike', brandTextSize: TextSizes.medium)
           ],
         )

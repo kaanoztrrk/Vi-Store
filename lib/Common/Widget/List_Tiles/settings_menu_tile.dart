@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
 
 class ViSettingsMenuTile extends StatelessWidget {

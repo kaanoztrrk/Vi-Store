@@ -13,7 +13,7 @@ class ViSectionHeading extends StatelessWidget {
   final Color? textColor;
   final bool showActionButton;
   final String title, buttonTitle;
-  final void Function()? onPressed;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {

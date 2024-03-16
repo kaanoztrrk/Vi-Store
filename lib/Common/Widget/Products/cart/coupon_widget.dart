@@ -47,7 +47,7 @@ class ViCouponCode extends StatelessWidget {
                       backgroundColor: AppColors.grey.withOpacity(0.2),
                       side: BorderSide(color: AppColors.grey.withOpacity(0.1))),
                   onPressed: () {},
-                  child: Text("Apply")))
+                  child: const Text("Apply")))
         ],
       ),
     );

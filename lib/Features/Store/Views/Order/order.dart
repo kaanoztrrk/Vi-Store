@@ -15,7 +15,7 @@ class OrderPage extends StatelessWidget {
             Text('My Orders', style: Theme.of(context).textTheme.headlineSmall),
         showBackArrow: true,
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(ViSizes.defaultSpace),
         child: ViOrderListItems(),
       ),

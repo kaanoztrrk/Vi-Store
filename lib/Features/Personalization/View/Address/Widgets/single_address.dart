@@ -26,7 +26,7 @@ class ViSingleAddress extends StatelessWidget {
               ? AppColors.darkerGrey
               : AppColors.grey,
       margin: const EdgeInsets.only(bottom: ViSizes.spaceBtwItems),
-      padding: EdgeInsets.all(ViSizes.md),
+      padding: const EdgeInsets.all(ViSizes.md),
       child: Stack(
         children: [
           Positioned(

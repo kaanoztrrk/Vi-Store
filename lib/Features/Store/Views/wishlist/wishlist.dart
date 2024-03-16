@@ -24,7 +24,7 @@ class FavouritePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ViSizes.defaultSpace),
+          padding: const EdgeInsets.all(ViSizes.defaultSpace),
           child: Column(
             children: [
               ViGridLayout(

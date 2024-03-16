@@ -7,7 +7,6 @@ import 'package:vi_store/Features/Personalization/View/Profile/Widget/profile_me
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 
-import '../../../../Util/Constant/colors.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -39,7 +38,7 @@ class ProfilePage extends StatelessWidget {
               // Details
 
               const SizedBox(height: ViSizes.spaceBtwItems / 2),
-              Divider(),
+              const Divider(),
               const SizedBox(height: ViSizes.spaceBtwItems),
               const ViSectionHeading(
                   title: "Profile Information", showActionButton: false),
@@ -57,7 +56,7 @@ class ProfilePage extends StatelessWidget {
               ),
 
               const SizedBox(height: ViSizes.spaceBtwItems),
-              Divider(),
+              const Divider(),
               const SizedBox(height: ViSizes.spaceBtwItems),
               ViProfileMenu(
                 onpressed: () {},
@@ -85,12 +84,12 @@ class ProfilePage extends StatelessWidget {
                 title: "Date of Birth",
                 value: "12 Jan 2002",
               ),
-              Divider(),
+              const Divider(),
               const SizedBox(height: ViSizes.spaceBtwItems),
               Center(
                 child: TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Close Account",
                       style: TextStyle(color: Colors.red),
                     )),

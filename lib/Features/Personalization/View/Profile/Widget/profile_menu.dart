@@ -20,7 +20,7 @@ class ViProfileMenu extends StatelessWidget {
     return GestureDetector(
       onTap: onpressed,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: ViSizes.spaceBtwItems / 1.5),
+        padding: const EdgeInsets.symmetric(vertical: ViSizes.spaceBtwItems / 1.5),
         child: Row(
           children: [
             Expanded(

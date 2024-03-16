@@ -16,7 +16,7 @@ class AddNewAddressPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ViSizes.defaultSpace),
+          padding: const EdgeInsets.all(ViSizes.defaultSpace),
           child: Form(
               child: Column(
             children: [
@@ -71,7 +71,7 @@ class AddNewAddressPage extends StatelessWidget {
               const SizedBox(height: ViSizes.defaultSpace),
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: () {}, child: Text("Save")),
+                child: ElevatedButton(onPressed: () {}, child: const Text("Save")),
               )
             ],
           )),

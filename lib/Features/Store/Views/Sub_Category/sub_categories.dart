@@ -19,7 +19,7 @@ class SubCategoriesPage extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineSmall)),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ViSizes.defaultSpace),
+          padding: const EdgeInsets.all(ViSizes.defaultSpace),
           child: Column(
             children: [
               const ViRoundedImage(
@@ -37,9 +37,9 @@ class SubCategoriesPage extends StatelessWidget {
                       itemCount: 4,
                       scrollDirection: Axis.horizontal,
                       separatorBuilder: (context, index) =>
-                          SizedBox(width: ViSizes.spaceBtwItems),
+                          const SizedBox(width: ViSizes.spaceBtwItems),
                       itemBuilder: (context, index) =>
-                          ViProductCardHorizontal(),
+                          const ViProductCardHorizontal(),
                     ),
                   )
                 ],

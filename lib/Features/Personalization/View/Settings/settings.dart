@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/primary_header_container.dart';
-import 'package:vi_store/Common/Widget/Icons/vi_circular_icon.dart';
-import 'package:vi_store/Common/Widget/Images/circular_image.dart';
 import 'package:vi_store/Common/Widget/List_Tiles/settings_menu_tile.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
 import 'package:vi_store/Features/Personalization/View/Address/address.dart';
@@ -13,7 +11,6 @@ import 'package:vi_store/Util/Constant/colors.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 
 import '../../../../Common/Widget/List_Tiles/user_profile_tile.dart';
-import '../../../../Util/Constant/image_strings.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -37,19 +34,19 @@ class SettingsPage extends StatelessWidget {
                         .apply(color: AppColors.white),
                   ),
                 ),
-                ViUserProfileTile(),
+                const ViUserProfileTile(),
                 const SizedBox(height: ViSizes.spaceBtwSections),
               ],
             )),
             // Body
 
             Padding(
-              padding: EdgeInsets.all(ViSizes.defaultSpace),
+              padding: const EdgeInsets.all(ViSizes.defaultSpace),
               child: Column(
                 children: [
-                  ViSectionHeading(
+                  const ViSectionHeading(
                       title: "Account Settings", showActionButton: false),
-                  SizedBox(height: ViSizes.spaceBtwItems),
+                  const SizedBox(height: ViSizes.spaceBtwItems),
 
                   // Account Settings
                   ViSettingsMenuTile(
@@ -90,10 +87,10 @@ class SettingsPage extends StatelessWidget {
                       subTitle: "Manage data usage and connected accounts"),
 
                   // App Settings
-                  SizedBox(height: ViSizes.spaceBtwItems),
-                  ViSectionHeading(
+                  const SizedBox(height: ViSizes.spaceBtwItems),
+                  const ViSectionHeading(
                       title: "App Settings", showActionButton: false),
-                  SizedBox(height: ViSizes.spaceBtwItems),
+                  const SizedBox(height: ViSizes.spaceBtwItems),
                   ViSettingsMenuTile(
                       onTap: () {},
                       icon: Iconsax.document_upload,
@@ -127,14 +124,14 @@ class SettingsPage extends StatelessWidget {
                       onChanged: (value) {},
                     ),
                   ),
-                  SizedBox(height: ViSizes.spaceBtwSections),
+                  const SizedBox(height: ViSizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
                     child:
-                        OutlinedButton(onPressed: () {}, child: Text("Logout")),
+                        OutlinedButton(onPressed: () {}, child: const Text("Logout")),
                   ),
 
-                  SizedBox(height: ViSizes.spaceBtwSections * 2.5),
+                  const SizedBox(height: ViSizes.spaceBtwSections * 2.5),
                 ],
               ),
             ),

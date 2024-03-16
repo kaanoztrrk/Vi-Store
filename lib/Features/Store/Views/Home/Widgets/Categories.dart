@@ -22,7 +22,7 @@ class ViHomeCategories extends StatelessWidget {
           return ViVerticalImageText(
             image: ViImages.clothes,
             title: 'Clothes',
-            onTap: () => Get.to(() => SubCategoriesPage()),
+            onTap: () => Get.to(() => const SubCategoriesPage()),
           );
         },
       ),

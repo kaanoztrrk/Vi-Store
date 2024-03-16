@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:vi_store/Common/Widget/Products/ProductCard.dart/product_card_vertical.dart';
 import 'package:vi_store/Common/Widget/layouts/grid_layout.dart';
+import 'package:vi_store/Features/Store/Views/AllProducts/all_products.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 import '../../../../Common/Widget/Custom_shapes/Containers/primary_header_container.dart';
@@ -64,7 +66,8 @@ class HomePage extends StatelessWidget {
                     const SizedBox(height: ViSizes.spaceBtwSections),
                     //Populer Products
                     ViSectionHeading(
-                        title: "Popular Products", onPressed: () {}),
+                        title: "Popular Products",
+                        onPressed: () => Get.to(() => const AllProducts())),
                     const SizedBox(height: ViSizes.spaceBtwSections),
                     //Grid View
                     ViGridLayout(
