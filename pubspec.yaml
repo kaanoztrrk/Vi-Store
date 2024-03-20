@@ -57,10 +57,14 @@ dependencies:
   carousel_slider: ^4.2.1
   readmore: ^2.2.0
   flutter_rating_bar: ^4.0.1
+  lottie: ^3.1.0
+  connectivity_plus: ^5.0.2
+
 
   #firebase
   firebase_core: ^2.23.0
-
+  firebase_auth: ^4.14.0
+  cloud_firestore: ^4.13.1
 
   
 
@@ -101,6 +105,7 @@ flutter:
     - assets/Videos/
     - assets/Fonts/
     - assets/Logos/
+    - assets/Lottie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

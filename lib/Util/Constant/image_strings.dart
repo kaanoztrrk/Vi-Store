@@ -23,6 +23,8 @@ class ViImages {
   static const String staticSuccessllustration =
       "assets/Images/animation/sammy-line-success.png";
 
+  static const String doteImage = "assets/Lottie/doteImage.json";
+
   // * Categroies
   static const String animals = "assets/Icons/categories/animals.png";
   static const String clothes = "assets/Icons/categories/clothes.png";

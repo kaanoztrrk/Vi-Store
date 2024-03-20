@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vi_store/Features/Authentication/Controller/Signup/signup_controller.dart';
 
 import '../../../../../Util/Constant/colors.dart';
 import '../../../../../Util/Constant/sizes.dart';
@@ -12,13 +14,17 @@ class ViTermAndConditionCheckbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     final dark = ViHelpersFunctions.isDarkMode(context);
     return Row(
       children: [
         SizedBox(
             width: 15,
             height: 15,
-            child: Checkbox(value: true, onChanged: (value) {})),
+            child: Obx(() => Checkbox(
+                value: controller.privacyPolicy.value,
+                onChanged: (value) => controller.privacyPolicy.value =
+                    !controller.privacyPolicy.value))),
         const SizedBox(width: ViSizes.spaceBtwItems),
         Text.rich(TextSpan(children: [
           TextSpan(

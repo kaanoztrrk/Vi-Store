@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vi_store/Features/Authentication/Controller_Onboarding/onboarding_controller.dart';
+import 'package:vi_store/Features/Authentication/Controller/Onboarding/onboarding_controller.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/text_strings.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:vi_store/Features/Authentication/Controller_Onboarding/onboarding_controller.dart';
+import 'package:vi_store/Features/Authentication/Controller/Onboarding/onboarding_controller.dart';
 import 'package:vi_store/Util/Helpers/helpers_functions.dart';
 
 import '../../../../../Util/Constant/colors.dart';
