@@ -5,6 +5,7 @@ import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
 import 'package:vi_store/Common/Widget/Custom_shapes/Containers/primary_header_container.dart';
 import 'package:vi_store/Common/Widget/List_Tiles/settings_menu_tile.dart';
 import 'package:vi_store/Common/Widget/Texts/section_heading.dart';
+import 'package:vi_store/Data/Repositories/authentication_repository.dart';
 import 'package:vi_store/Features/Personalization/View/Address/address.dart';
 import 'package:vi_store/Features/Store/Views/Order/order.dart';
 import 'package:vi_store/Util/Constant/colors.dart';
@@ -17,6 +18,7 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(AuthenticationRepository());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -127,8 +129,9 @@ class SettingsPage extends StatelessWidget {
                   const SizedBox(height: ViSizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
-                    child:
-                        OutlinedButton(onPressed: () {}, child: const Text("Logout")),
+                    child: OutlinedButton(
+                        onPressed: () => controller.logout(),
+                        child: const Text("Logout")),
                   ),
 
                   const SizedBox(height: ViSizes.spaceBtwSections * 2.5),
