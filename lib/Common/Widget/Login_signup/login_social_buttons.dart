@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vi_store/Data/Repositories/authentication_repository.dart';
+import 'package:vi_store/Features/Authentication/Controller/Login/login_controller.dart';
 
 import '../../../Util/Constant/colors.dart';
 import '../../../Util/Constant/image_strings.dart';
@@ -11,6 +14,7 @@ class ViSocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -20,7 +24,7 @@ class ViSocialButtons extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
           ),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () => controller.googleSignIn(),
               icon: const Image(
                   width: ViSizes.iconMd,
                   height: ViSizes.iconMd,

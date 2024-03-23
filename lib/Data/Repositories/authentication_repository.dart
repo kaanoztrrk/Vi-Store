@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:vi_store/Features/Authentication/Views/Login/login.dart';
 import 'package:vi_store/Features/Authentication/Views/OnBoarding/onboarding.dart';
 import 'package:vi_store/Features/Authentication/Views/Signup/verify_email.dart';
@@ -33,7 +34,7 @@ class AuthenticationRepository extends GetxController {
     final user = _auth.currentUser;
     if (user != null) {
       if (user.emailVerified) {
-        Get.offAll(() => NavigatorMenu());
+        Get.offAll(() => const NavigatorMenu());
       } else {
         Get.offAll(() => VerifyEmailPage(
               email: _auth.currentUser?.email,
@@ -66,7 +67,7 @@ class AuthenticationRepository extends GetxController {
     } on FirebaseException catch (e) {
       throw ViFirebaseException(e.code).message;
     } on FormatException catch (_) {
-      throw ViFormatException().message;
+      throw const ViFormatException().message;
     } on PlatformException catch (e) {
       throw ViPlatformException(e.code).message;
     } catch (e) {
@@ -85,7 +86,7 @@ class AuthenticationRepository extends GetxController {
     } on FirebaseException catch (e) {
       throw ViFirebaseException(e.code).message;
     } on FormatException catch (_) {
-      throw ViFormatException().message;
+      throw const ViFormatException().message;
     } on PlatformException catch (e) {
       throw ViPlatformException(e.code).message;
     } catch (e) {
@@ -116,6 +117,35 @@ class AuthenticationRepository extends GetxController {
   /*--------------------------- ----------------Federated İdentity & social sign in ------------------------------------ */
 
   /// Google AUTH - GOOGLE
+  Future<UserCredential?> signInWithGoogle() async {
+    try {
+      // Triger the ayth flow
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      // Abtain the auth details from the request
+      final GoogleSignInAuthentication? googleAuth =
+          await userAccount?.authentication;
+
+      // Create a new credential
+      final crendentials = GoogleAuthProvider.credential(
+          accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
+
+      // Once Signed in, return  the USerCredential
+      return await _auth.signInWithCredential(crendentials);
+    } on FirebaseAuthException catch (e) {
+      throw ViFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw ViFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const ViFormatException();
+    } on PlatformException catch (e) {
+      throw ViPlatformException(e.code).message;
+    } catch (e) {
+      if (kDebugMode) print('Something went wrong: $e');
+      return null;
+    }
+  }
+
   /// FaceBook AUTH - FACEBOOK
 
   /*--------------------------- ---------------./end Federated identity & social sign in------------------------------------ */
@@ -124,6 +154,7 @@ class AuthenticationRepository extends GetxController {
   Future<void> logout() async {
     try {
       await FirebaseAuth.instance.signOut();
+      await GoogleSignIn().signOut();
       Get.offAll(() => const LoginPage());
     } on FirebaseAuthException catch (e) {
       throw ViFirebaseAuthException(e.code).message;

@@ -2,7 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:http/http.dart';
 import 'package:vi_store/Data/Repositories/authentication_repository.dart';
+import 'package:vi_store/Features/Personalization/Controllers/user_controller.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Popups/full_screen_loader.dart';
 import 'package:vi_store/Util/validators/network_Manager.dart';
@@ -25,7 +27,9 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
+  // -- Email and Password SignIn
   Future<void> emailAndPasswordSignIn() async {
     try {
       // Start Loading
@@ -62,6 +66,31 @@ class LoginController extends GetxController {
       // show some generic error to user
       ViFullScreenLoader.stopLoading();
       ViLoaders.errorSnacBar(title: 'Oh Snap!', message: e.toString());
+    }
+  }
+
+  // --Google SignI Authentication
+  Future<void> googleSignIn() async {
+    try {
+      // Start Loading
+      ViFullScreenLoader.openLoadingDialog(
+          'Logging you in...', ViImages.doteImage);
+
+      // Google Auth
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      // Save User Record
+      await userController.saveUserRecord(userCredentials);
+
+      // Remove Loader
+
+      ViFullScreenLoader.stopLoading();
+
+      // Redirect
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      ViLoaders.errorSnacBar(title: 'Oh Snap', message: e.toString());
     }
   }
 }
