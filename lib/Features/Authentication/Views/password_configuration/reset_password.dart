@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vi_store/Features/Authentication/Controller/ForgetPassword/forget_password_controller.dart';
+import 'package:vi_store/Features/Authentication/Views/Login/login.dart';
 import 'package:vi_store/Util/Constant/image_strings.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 
@@ -8,7 +10,8 @@ import '../../../../Util/Constant/text_strings.dart';
 import '../../../../Util/Helpers/helpers_functions.dart';
 
 class ResetPassword extends StatelessWidget {
-  const ResetPassword({super.key});
+  const ResetPassword({super.key, required this.email});
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,8 @@ class ResetPassword extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.back(), icon: const Icon(CupertinoIcons.clear))
+              onPressed: () => Get.back(),
+              icon: const Icon(CupertinoIcons.clear))
         ],
       ),
       body: Padding(
@@ -45,14 +49,17 @@ class ResetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(ViTexts.done)),
+                  onPressed: () => Get.offAll(() => const LoginPage()),
+                  child: const Text(ViTexts.done)),
             ),
             const SizedBox(height: ViSizes.spaceBtwItems),
 
             SizedBox(
               width: double.infinity,
               child: TextButton(
-                  onPressed: () {}, child: const Text(ViTexts.resendEmail)),
+                  onPressed: () => ForgetPasswordController.instance
+                      .resendPasswordResetEmail(email),
+                  child: const Text(ViTexts.resendEmail)),
             ),
           ],
         ),

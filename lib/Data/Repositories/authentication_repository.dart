@@ -26,7 +26,9 @@ class AuthenticationRepository extends GetxController {
   //Called from main.dart on app launch
   @override
   void onReady() {
+    // Remove the native splash screen
     FlutterNativeSplash.remove();
+    // Redirect to the appropriate screen
     screenRedirect();
   }
 
@@ -95,6 +97,7 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// REAuth     - REAuth User
+
   /// Email Verification - MAİL VERİFİCATİON
   Future<void> sendEmailVerification() async {
     try {
@@ -113,6 +116,21 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// Email Verification - FORGET PASSWORD
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw ViFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw ViFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const ViFormatException();
+    } on PlatformException catch (e) {
+      throw ViPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again.';
+    }
+  }
 
   /*--------------------------- ----------------Federated İdentity & social sign in ------------------------------------ */
 

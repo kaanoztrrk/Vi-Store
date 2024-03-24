@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:vi_store/Common/Widget/Appbar/appbar.dart';
+import 'package:vi_store/Features/Authentication/Controller/ForgetPassword/forget_password_controller.dart';
 import 'package:vi_store/Util/Constant/sizes.dart';
 import 'package:vi_store/Util/Constant/text_strings.dart';
+import 'package:vi_store/Util/validators/validationHelpers.dart';
 
 import 'reset_password.dart';
 
@@ -11,8 +14,9 @@ class ForgotPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
-      appBar: AppBar(),
+      appBar: ViAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(ViSizes.defaultSpace),
         child: Column(
@@ -26,10 +30,15 @@ class ForgotPassword extends StatelessWidget {
             const SizedBox(height: ViSizes.spaceBtwSections * 2),
 
             // TextField
-            const TextField(
-              decoration: InputDecoration(
-                  labelText: ViTexts.email,
-                  prefixIcon: Icon(Iconsax.direct_right)),
+            Form(
+              key: controller.forgetPasswordFormKey,
+              child: TextFormField(
+                controller: controller.email,
+                validator: ViValidator.validateEmail,
+                decoration: const InputDecoration(
+                    labelText: ViTexts.email,
+                    prefixIcon: Icon(Iconsax.direct_right)),
+              ),
             ),
             const SizedBox(height: ViSizes.spaceBtwSections),
 
@@ -37,7 +46,7 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => Get.off(() => const ResetPassword()),
+                    onPressed: () => controller.sendPasswordResetEmail(),
                     child: const Text(ViTexts.submit)))
           ],
         ),
