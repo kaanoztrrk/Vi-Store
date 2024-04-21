@@ -1,7 +1,50 @@
 import '../Features/Store/Models/category_model.dart';
 import '../Util/Constant/image_strings.dart';
+import '../Util/Routes/vi_routes.dart';
+import 'Model/Banner/banner_model.dart';
 
 class ViDummyData {
+  static final List<BannerModel> banners = [
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.profile,
+      active: false,
+    ),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+    BannerModel(
+        imageUrl: ViImages.promoBanner1,
+        targetScreen: ViRoutes.profile,
+        active: false),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+    BannerModel(
+      imageUrl: ViImages.promoBanner1,
+      targetScreen: ViRoutes.order,
+      active: false,
+    ),
+  ];
   static final List<CategoryModel> category = [
     CategoryModel(
       id: '1',

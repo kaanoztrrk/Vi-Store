@@ -6,7 +6,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'Core/app.dart';
 import 'Data/Repositories/Authentication/authentication_repository.dart';
-import 'firebase_options.dart';
+import 'Core/firebase_options.dart';
 
 Future<void> main() async {
   final WidgetsBinding widgetBinding =

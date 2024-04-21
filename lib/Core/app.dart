@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +16,7 @@ class App extends StatelessWidget {
         theme: ViAppTheme.ligthTheme,
         darkTheme: ViAppTheme.darkTheme,
         initialBinding: GeneralBindings(),
+        getPages: AppRoutes.pages,
         home: const Scaffold(
           backgroundColor: AppColors.primary,
           body: Center(child: CircularProgressIndicator(color: Colors.white)),

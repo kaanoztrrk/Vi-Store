@@ -60,11 +60,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(ViSizes.defaultSpace),
                 child: Column(
                   children: [
-                    const ViPromoSlider(banners: [
-                      ViImages.promoBanner1,
-                      ViImages.promoBanner2,
-                      ViImages.promoBanner3,
-                    ]),
+                    const ViPromoSlider(),
                     const SizedBox(height: ViSizes.spaceBtwSections),
                     //Populer Products
                     ViSectionHeading(

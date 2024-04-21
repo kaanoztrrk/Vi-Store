@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../../Features/Store/Models/category_model.dart';
 import '../../../Util/Exception/firebase_exceptions.dart';
 import '../../../Util/Exception/platform_exceptions.dart';
-import '../../../Util/Service/vi_firebase_storage_sevice.dart';
+import '../../../Util/Service/vi_firebase_storage_service.dart';
 
 class CategoryRepository extends GetxController {
   static CategoryRepository get instance => Get.find();

@@ -8,8 +8,8 @@ import '../../../../Util/Constant/text_strings.dart';
 import '../../../../Util/validators/validationHelpers.dart';
 import '../../Controller/ForgetPassword/forget_password_controller.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgetPassword extends StatelessWidget {
+  const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
