@@ -1,6 +1,4 @@
-/*
-
-
+import '../Features/Store/Models/category_model.dart';
 import '../Util/Constant/image_strings.dart';
 
 class ViDummyData {
@@ -9,48 +7,49 @@ class ViDummyData {
       id: '1',
       name: 'Sports',
       image: ViImages.supports,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
-        id: '5',
-        name: 'Furniture',
-        image: ViImages.furnitures,
-        isFetured: true),
+      id: '5',
+      name: 'Furniture',
+      image: ViImages.furnitures,
+      isFeatured: true,
+    ),
     CategoryModel(
       id: '2',
       name: 'Electronics',
       image: ViImages.electronic,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
       id: '3',
       name: 'Clothes',
       image: ViImages.clothes,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
       id: '4',
       name: 'Animals',
       image: ViImages.animals,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
       id: '6',
       name: 'Shoes',
       image: ViImages.shoes,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
       id: '7',
       name: 'Cosmetics',
       image: ViImages.cosmetics,
-      isFetured: true,
+      isFeatured: true,
     ),
     CategoryModel(
       id: '14',
       name: 'Jewery',
       image: ViImages.jewelry,
-      isFetured: true,
+      isFeatured: true,
     ),
 
     // Sub-Category
@@ -58,53 +57,56 @@ class ViDummyData {
         id: '8',
         name: 'Sports',
         image: ViImages.supports,
-        isFetured: true,
+        isFeatured: true,
         parentId: '1'),
     CategoryModel(
         id: '9',
         name: 'Sports',
         image: ViImages.supports,
-        isFetured: true,
+        isFeatured: true,
         parentId: '1'),
     CategoryModel(
         id: '10',
         name: 'Sports',
         image: ViImages.supports,
-        isFetured: true,
+        isFeatured: true,
         parentId: '1'),
 
     // Furiture
     CategoryModel(
-        id: '11',
-        name: 'Bedroom furniture',
-        image: ViImages.furnitures,
-        parentId: '5',
-        isFetured: true),
+      id: '11',
+      name: 'Bedroom furniture',
+      image: ViImages.furnitures,
+      parentId: '5',
+      isFeatured: true,
+    ),
     CategoryModel(
-        id: '12',
-        name: 'Track furniture',
-        image: ViImages.furnitures,
-        parentId: '5',
-        isFetured: true),
+      id: '12',
+      name: 'Track furniture',
+      image: ViImages.furnitures,
+      parentId: '5',
+      isFeatured: true,
+    ),
     CategoryModel(
-        id: '13 ',
-        name: 'Sport furniture',
-        image: ViImages.furnitures,
-        parentId: '5',
-        isFetured: true),
+      id: '13 ',
+      name: 'Sport furniture',
+      image: ViImages.furnitures,
+      parentId: '5',
+      isFeatured: true,
+    ),
 
     // electronic
     CategoryModel(
         id: '14',
         name: 'Laptop',
         image: ViImages.electronic,
-        isFetured: true,
+        isFeatured: true,
         parentId: '2'),
     CategoryModel(
         id: '15',
         name: 'Phone',
         image: ViImages.electronic,
-        isFetured: true,
+        isFeatured: true,
         parentId: '2'),
   ];
 }
@@ -222,4 +224,4 @@ class ViDummyData {
   ];
  */
 
- */
+ 

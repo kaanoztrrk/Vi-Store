@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_app/Common/Widget/Images/circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Util/Constant/colors.dart';
@@ -31,7 +32,10 @@ class ViVerticalImageText extends StatelessWidget {
         padding: const EdgeInsets.only(right: ViSizes.spaceBtwItems),
         child: Column(
           children: [
-            ViCircularImage(image: image),
+            ViCircularImage(
+              image: image,
+              isNetworkImage: isNetworkImage,
+            ),
             const SizedBox(height: ViSizes.spaceBtwItems / 2),
             Container(
               alignment: Alignment.center,
@@ -47,65 +51,6 @@ class ViVerticalImageText extends StatelessWidget {
               ),
             )
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class ViCircularImage extends StatelessWidget {
-  const ViCircularImage({
-    super.key,
-    this.width = 56,
-    this.heigth = 56,
-    this.overlayColor,
-    this.backgroundColor,
-    required this.image,
-    this.boxFit = BoxFit.cover,
-    this.padding = ViSizes.sm,
-    this.isNetworkImage = false,
-  });
-
-  final BoxFit? boxFit;
-  final String image;
-  final bool isNetworkImage;
-  final Color? overlayColor;
-  final Color? backgroundColor;
-  final double width, heigth, padding;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: heigth,
-      padding: EdgeInsets.all(padding),
-      decoration: BoxDecoration(
-          color: backgroundColor ??
-              (ViHelpersFunctions.isDarkMode(context)
-                  ? AppColors.black
-                  : AppColors.white),
-          borderRadius: BorderRadius.circular(100)),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(100),
-        child: Center(
-          child: isNetworkImage
-              ? CachedNetworkImage(
-                  fit: boxFit,
-                  color: overlayColor,
-                  imageUrl: image,
-                  progressIndicatorBuilder: (context, url, progress) =>
-                      const ViSshimmerEffect(
-                    width: 55,
-                    heigth: 55,
-                    radius: 55,
-                  ),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
-                )
-              : Image(
-                  fit: boxFit,
-                  color: overlayColor,
-                  image: AssetImage(image),
-                ),
         ),
       ),
     );

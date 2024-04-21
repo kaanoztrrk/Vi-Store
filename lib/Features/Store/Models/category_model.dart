@@ -5,19 +5,19 @@ class CategoryModel {
   String name;
   String image;
   String parentId;
-  bool isFetured;
+  bool isFeatured;
 
   CategoryModel({
     required this.id,
     required this.name,
     required this.image,
-    required this.isFetured,
+    required this.isFeatured,
     this.parentId = '',
   });
 
   // Emty Helper Fonction
   static CategoryModel empty() =>
-      CategoryModel(id: '', name: '', image: '', isFetured: false);
+      CategoryModel(id: '', name: '', image: '', isFeatured: false);
 
   // Convert model to Json structure so that you can store data in firebase
   Map<String, dynamic> toJson() {
@@ -25,7 +25,7 @@ class CategoryModel {
       'Name': name,
       'Image': image,
       'ParentId': parentId,
-      'IsFeatured': isFetured,
+      'IsFeatured': isFeatured,
     };
   }
 
@@ -41,7 +41,7 @@ class CategoryModel {
         name: data['Name'] ?? '',
         image: data['Image'] ?? '',
         parentId: data['ParentId'] ?? '',
-        isFetured: data['IsFeatured'] ?? false,
+        isFeatured: data['IsFeatured'] ?? false,
       );
     } else {
       return CategoryModel.empty();

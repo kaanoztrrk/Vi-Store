@@ -8,14 +8,15 @@ import '../../../../../Common/Widget/Texts/section_heading.dart';
 import '../../../../../Common/Widget/layouts/grid_layout.dart';
 import '../../../../../Util/Constant/image_strings.dart';
 import '../../../../../Util/Constant/sizes.dart';
+import '../../../Models/category_model.dart';
 
 class ViCategoryTab extends StatelessWidget {
   const ViCategoryTab({
     super.key,
-    // required this.categoryModel,
+    required this.categoryModel,
   });
 
-  // final CategoryModel categoryModel;
+  final CategoryModel categoryModel;
 
   @override
   Widget build(BuildContext context) {

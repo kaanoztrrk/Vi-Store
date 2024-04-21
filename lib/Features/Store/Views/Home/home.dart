@@ -11,6 +11,7 @@ import '../../../../Util/Constant/image_strings.dart';
 import '../../../../Util/Constant/sizes.dart';
 import '../AllProducts/all_products.dart';
 import 'Widgets/appbar.dart';
+import 'Widgets/categories.dart';
 import 'Widgets/promo_slider.dart';
 
 class HomePage extends StatelessWidget {
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
                         SizedBox(height: ViSizes.spaceBtwItems),
 
                         // Categories
-                        //  ViHomeCategories()
+                        ViHomeCategories(),
                       ],
                     ),
                   ),
