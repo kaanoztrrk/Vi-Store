@@ -1,11 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce_app/Common/Widget/Images/circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Util/Constant/colors.dart';
 import '../../../Util/Constant/sizes.dart';
-import '../../../Util/Helpers/helpers_functions.dart';
-import '../shimmer/shimmer.dart';
 
 class ViVerticalImageText extends StatelessWidget {
   const ViVerticalImageText({

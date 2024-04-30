@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import '../../../Data/Repositories/Product/product_repository.dart';
+import '../../../../Data/Repositories/Product/product_repository.dart';
 
 class ProductController extends GetxController {
   static ProductController get instance => Get.find();
@@ -58,7 +58,7 @@ class ProductController extends GetxController {
 
   // Ürün fiyatını veya varyasyon fiyat aralığını al
   String getProductPrice(ProductModel product) {
-    if (product.productType == ProductType.single) {
+    if (product.productType == ProductType.single.toString()) {
       return (product.salePrice > 0 ? product.salePrice : product.price)
           .toString();
     } else {

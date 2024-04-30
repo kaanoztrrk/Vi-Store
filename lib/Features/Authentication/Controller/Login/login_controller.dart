@@ -57,8 +57,8 @@ class LoginController extends GetxController {
         localStorage.write('REMEMBER_ME_PASSWORD', password.text.trim());
       }
       // login user using email  & password auuthentication
-      final userCredential = await AuthenticationRepository.instance
-          .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+      /*   final userCredential = await AuthenticationRepository.instance
+          .loginWithEmailAndPassword(email.text.trim(), password.text.trim());*/
 
       ViFullScreenLoader.stopLoading();
 

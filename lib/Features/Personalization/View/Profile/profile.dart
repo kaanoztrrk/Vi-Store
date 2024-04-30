@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../Common/Widget/Appbar/appbar.dart';
-import '../../../../Common/Widget/Image_Text_Widget/vertical_image_text.dart';
 import '../../../../Common/Widget/Images/circular_image.dart';
 import '../../../../Common/Widget/Texts/section_heading.dart';
 import '../../../../Util/Constant/image_strings.dart';

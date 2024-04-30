@@ -1,3 +1,5 @@
+// ignore_for_file: use_rethrow_when_possible
+
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';

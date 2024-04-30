@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce_app/Util/Exception/firebase_exceptions.dart';
 import 'package:ecommerce_app/Util/Exception/platform_exceptions.dart';
 import 'package:ecommerce_app/Util/Service/vi_firebase_storage_service.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +34,7 @@ class ProductRepository extends GetxController {
     } catch (e) {
       // Diğer hataları daha spesifik bir şekilde işle
       // Örneğin, network hatası, veritabanı hatası gibi...
-      print(e);
+      //  print(e);
       throw 'Something went wrong: $e';
     }
   }

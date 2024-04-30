@@ -9,7 +9,7 @@ import '../../../../../Common/Widget/Image_Text_Widget/vertical_image_text.dart'
 import '../../Sub_Category/sub_categories.dart';
 
 class ViHomeCategories extends StatelessWidget {
-  const ViHomeCategories({Key? key}) : super(key: key);
+  const ViHomeCategories({super.key});
 
   @override
   Widget build(BuildContext context) {

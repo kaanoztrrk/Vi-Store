@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Features/Store/Controllers/product_controller.dart';
+import 'package:ecommerce_app/Features/Store/Controllers/Product/product_controller.dart';
 import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
 import 'package:ecommerce_app/Util/Constant/enums.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ import '../../Texts/vi_product_price_text.dart';
 import '../../Texts/vi_product_title_text.dart';
 
 class ViProductCardVertical extends StatelessWidget {
-  ViProductCardVertical({super.key, required this.product});
+  const ViProductCardVertical({super.key, required this.product});
 
   final ProductModel product;
 

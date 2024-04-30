@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/Common/Widget/layouts/grid_layout.dart';
 import 'package:ecommerce_app/Common/Widget/shimmer/shimmer.dart';
 import 'package:ecommerce_app/Util/Constant/sizes.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ViVerticalProdductShimmer extends StatelessWidget {

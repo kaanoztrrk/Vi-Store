@@ -26,7 +26,9 @@ class ProductDetails extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const ViProductImageSlider(),
+            ViProductImageSlider(
+              product: product,
+            ),
             Padding(
               padding: const EdgeInsets.only(
                 right: ViSizes.defaultSpace,

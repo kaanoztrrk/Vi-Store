@@ -9,7 +9,7 @@ import '../../../../Common/Widget/Texts/section_heading.dart';
 
 import '../../../../Common/Widget/layouts/grid_layout.dart';
 import '../../../../Util/Constant/sizes.dart';
-import '../../Controllers/product_controller.dart';
+import '../../Controllers/Product/product_controller.dart';
 import '../AllProducts/all_products.dart';
 import 'Widgets/appbar.dart';
 import 'Widgets/categories.dart';

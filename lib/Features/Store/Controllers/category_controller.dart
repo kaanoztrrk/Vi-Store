@@ -2,7 +2,6 @@ import 'package:ecommerce_app/Data/Repositories/Categories/category_repository.d
 import 'package:ecommerce_app/Features/Store/Models/category_model.dart';
 import 'package:ecommerce_app/Util/Loader/vi_loader.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 
 class CategoryController extends GetxController {
   static CategoryController get instance => Get.find();

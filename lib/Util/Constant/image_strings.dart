@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 class ViImages {
   // * App Logos
   static const String darkApplogo =
