@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -29,7 +30,9 @@ class ViSortableProducts extends StatelessWidget {
         const SizedBox(height: ViSizes.spaceBtwSections),
         ViGridLayout(
           itemCount: 8,
-          itemBuilder: (_, index) => const ViProductCardVertical(),
+          itemBuilder: (_, index) => ViProductCardVertical(
+            product: ProductModel.empty(),
+          ),
         )
       ],
     );

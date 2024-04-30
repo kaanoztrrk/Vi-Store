@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -13,7 +14,9 @@ import 'Widget/product_rating_and_share.dart';
 import 'package:readmore/readmore.dart';
 
 class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+  const ProductDetails({super.key, required this.product});
+
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {

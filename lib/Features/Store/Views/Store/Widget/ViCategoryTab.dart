@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Common/Widget/Brand/brand_show_case.dart';
@@ -40,7 +41,9 @@ class ViCategoryTab extends StatelessWidget {
               const SizedBox(height: ViSizes.spaceBtwItems),
               ViGridLayout(
                 itemCount: 4,
-                itemBuilder: (_, index) => const ViProductCardVertical(),
+                itemBuilder: (_, index) => ViProductCardVertical(
+                  product: ProductModel.empty(),
+                ),
               )
             ],
           ),

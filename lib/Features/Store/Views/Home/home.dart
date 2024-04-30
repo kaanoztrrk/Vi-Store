@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Common/Widget/shimmer/vertical_product_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,8 +8,8 @@ import '../../../../Common/Widget/Products/ProductCard.dart/product_card_vertica
 import '../../../../Common/Widget/Texts/section_heading.dart';
 
 import '../../../../Common/Widget/layouts/grid_layout.dart';
-import '../../../../Util/Constant/image_strings.dart';
 import '../../../../Util/Constant/sizes.dart';
+import '../../Controllers/product_controller.dart';
 import '../AllProducts/all_products.dart';
 import 'Widgets/appbar.dart';
 import 'Widgets/categories.dart';
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ProductController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -68,10 +70,25 @@ class HomePage extends StatelessWidget {
                         onPressed: () => Get.to(() => const AllProducts())),
                     const SizedBox(height: ViSizes.spaceBtwSections),
                     //Grid View
-                    ViGridLayout(
-                        itemCount: 4,
-                        itemBuilder: (_, index) =>
-                            const ViProductCardVertical()),
+                    Obx(() {
+                      if (controller.isLoading.value) {
+                        return const ViVerticalProdductShimmer();
+                      }
+                      if (controller.featuredProducts.isEmpty) {
+                        return Center(
+                          child: Text(
+                            'No Data Found!',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        );
+                      }
+
+                      return ViGridLayout(
+                          itemCount: controller.featuredProducts.length,
+                          itemBuilder: (_, index) => ViProductCardVertical(
+                                product: controller.featuredProducts[index],
+                              ));
+                    })
                   ],
                 )),
           ],

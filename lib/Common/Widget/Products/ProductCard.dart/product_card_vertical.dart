@@ -1,10 +1,12 @@
+import 'package:ecommerce_app/Features/Store/Controllers/product_controller.dart';
+import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
+import 'package:ecommerce_app/Util/Constant/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../Features/Store/Views/PoductDetails/product_details.dart';
 import '../../../../Util/Constant/colors.dart';
-import '../../../../Util/Constant/image_strings.dart';
 import '../../../../Util/Constant/sizes.dart';
 import '../../../../Util/Helpers/helpers_functions.dart';
 import '../../../Styles/shadow.dart';
@@ -16,13 +18,19 @@ import '../../Texts/vi_product_price_text.dart';
 import '../../Texts/vi_product_title_text.dart';
 
 class ViProductCardVertical extends StatelessWidget {
-  const ViProductCardVertical({super.key});
+  ViProductCardVertical({super.key, required this.product});
+
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
+    final controller = ProductController.instance;
+    final salePercentage =
+        controller.calculateSalePercentage(product.price, product.salePrice);
     final dark = ViHelpersFunctions.isDarkMode(context);
+
     return GestureDetector(
-      onTap: () => Get.to(const ProductDetails()),
+      onTap: () => Get.to(ProductDetails(product: product)),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -37,14 +45,17 @@ class ViProductCardVertical extends StatelessWidget {
             // Thumbnail, WishlistButton, Discount Tag
             ViRoundedContainer(
               heigth: 200,
+              width: 200,
               //    padding: const EdgeInsets.all(ViSizes.sm),
               backgroundColor: dark ? AppColors.darkerGrey : AppColors.ligth,
               child: Stack(
                 children: [
-                  const ViRoundedImage(
-                      width: double.infinity,
-                      imageUrl: ViImages.productImage_5,
-                      applyImageRadius: true),
+                  Center(
+                    child: ViRoundedImage(
+                        imageUrl: product.thumbnail,
+                        applyImageRadius: true,
+                        isNetworkImage: true),
+                  ),
 
                   // Sale Tag
                   Positioned(
@@ -54,7 +65,7 @@ class ViProductCardVertical extends StatelessWidget {
                           backgroundColor: AppColors.secondary.withOpacity(0.8),
                           padding: const EdgeInsets.symmetric(
                               horizontal: ViSizes.sm, vertical: ViSizes.xs),
-                          child: Text('25%',
+                          child: Text('$salePercentage%',
                               style: Theme.of(context)
                                   .textTheme
                                   .labelLarge!
@@ -80,16 +91,29 @@ class ViProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ViProductTitleText(
-                      title: "White Nike Air Shoes", smallSize: true),
+                  ViProductTitleText(title: product.title, smallSize: true),
                   const SizedBox(height: ViSizes.spaceBtwItems / 2),
-                  const ViBrandTitleWithVerifiedIcon(title: "Nike"),
+                  ViBrandTitleWithVerifiedIcon(title: product.brand!.name),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // Price
 
-                      const ViProductPriceText(price: "35.6", isLarge: true),
+                      Flexible(
+                        child: Column(
+                          children: [
+                            if (product.productType ==
+                                    ProductType.single.toString() &&
+                                product.salePrice > 0)
+                              ViProductPriceText(
+                                  price: product.price.toString(),
+                                  isLarge: true),
+                            ViProductPriceText(
+                                price: controller.getProductPrice(product),
+                                isLarge: true),
+                          ],
+                        ),
+                      ),
 
                       Container(
                         decoration: const BoxDecoration(

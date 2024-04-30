@@ -7,6 +7,7 @@ import '../../../../Common/Widget/Icons/vi_circular_icon.dart';
 import '../../../../Common/Widget/Products/ProductCard.dart/product_card_vertical.dart';
 import '../../../../Common/Widget/layouts/grid_layout.dart';
 import '../../../../Util/Constant/sizes.dart';
+import '../../Models/product_model.dart';
 import '../Home/home.dart';
 
 class FavouritePage extends StatelessWidget {
@@ -30,7 +31,9 @@ class FavouritePage extends StatelessWidget {
             children: [
               ViGridLayout(
                   itemCount: 4,
-                  itemBuilder: (_, index) => const ViProductCardVertical())
+                  itemBuilder: (_, index) => ViProductCardVertical(
+                        product: ProductModel.empty(),
+                      ))
             ],
           ),
         ),

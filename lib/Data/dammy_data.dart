@@ -1,4 +1,9 @@
+import 'package:ecommerce_app/Features/Store/Models/brand_model.dart';
+import 'package:ecommerce_app/Features/Store/Models/product_attribute_model.dart';
+import 'package:ecommerce_app/Features/Store/Models/product_variation_model.dart';
+
 import '../Features/Store/Models/category_model.dart';
+import '../Features/Store/Models/product_model.dart';
 import '../Util/Constant/image_strings.dart';
 import '../Util/Routes/vi_routes.dart';
 import 'Model/Banner/banner_model.dart';
@@ -151,6 +156,60 @@ class ViDummyData {
         image: ViImages.electronic,
         isFeatured: true,
         parentId: '2'),
+  ];
+
+  // List of all Product
+  static final List<ProductModel> products = [
+    ProductModel(
+      id: '001',
+      title: 'Green Nike sports shoe',
+      stock: 15,
+      price: 135,
+      thumbnail: ViImages.productImage_1,
+      description: 'Green Nike sports shoe',
+      brand: BrandModel(
+          id: '',
+          image: ViImages.nike_logo,
+          name: 'Nike',
+          productsCount: 265,
+          isFeatured: true),
+      images: [
+        ViImages.productImage_1,
+        ViImages.productImage_2,
+        ViImages.productImage_3
+      ],
+      salePrice: 30,
+      sku: 'ABR4568',
+      categoryId: '1',
+      productAttributes: [
+        ProductAttributeModel(name: 'Color', values: ['Green', 'Black', 'Red']),
+        ProductAttributeModel(name: 'Size', values: ['41', '42']),
+      ],
+      productVariations: [
+        ProductVariationModel(
+          id: '1',
+          stock: 34,
+          salePrice: 134,
+          image: ViImages.productImage_1,
+          attributeValues: {'Color': 'Green', 'Size': '41'},
+        ),
+        ProductVariationModel(
+          id: '2',
+          stock: 34,
+          salePrice: 134,
+          image: ViImages.productImage_6,
+          attributeValues: {'Color': 'Green', 'Size': '41'},
+        ),
+        ProductVariationModel(
+          id: '3',
+          stock: 34,
+          salePrice: 134,
+          image: ViImages.productImage_10,
+          attributeValues: {'Color': 'red', 'Size': '41'},
+        ),
+      ],
+      productType: 'ProductType.varible',
+    )
   ];
 }
 

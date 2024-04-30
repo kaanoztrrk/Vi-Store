@@ -25,6 +25,9 @@ class ViImages {
 
   static const String doteImage = "assets/Lottie/doteImage.json";
 
+  // * Brand
+  static const String nike_logo = "assets/Icons/brands/nike.png";
+
   // * Categroies
   static const String animals = "assets/Icons/categories/animals.png";
   static const String clothes = "assets/Icons/categories/clothes.png";
