@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/Features/Store/Models/product_model.dart';
+import 'package:ecommerce_app/Util/Constant/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -41,10 +42,12 @@ class ProductDetails extends StatelessWidget {
                   // Rating & Share Button
                   const ViRatingandShare(),
                   // Price title stock brand
-                  const ProductMetaDeta(),
+                  ProductMetaDeta(product: product),
                   // Attributes
-                  const ProductAttributes(),
-                  const SizedBox(height: ViSizes.spaceBtwSections),
+                  if (product.productType == ProductType.variable.toString())
+                    ProductAttributes(product: product),
+                  if (product.productType == ProductType.variable.toString())
+                    const SizedBox(height: ViSizes.spaceBtwSections),
                   // Cectout Button
                   SizedBox(
                     width: double.infinity,
@@ -56,16 +59,16 @@ class ProductDetails extends StatelessWidget {
                   const ViSectionHeading(
                       title: 'Description', showActionButton: false),
                   const SizedBox(height: ViSizes.spaceBtwItems),
-                  const ReadMoreText(
-                    'This is a Product description for white Nike sport shoes. There are more thing tht can be added but i am just praticing and nothing else.',
+                  ReadMoreText(
+                    product.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: ' Show more',
                     trimExpandedText: ' Less',
-                    moreStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-                    lessStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    moreStyle: const TextStyle(
+                        fontSize: 14, fontWeight: FontWeight.w800),
+                    lessStyle: const TextStyle(
+                        fontSize: 14, fontWeight: FontWeight.w800),
                   ),
 
                   const Divider(),
