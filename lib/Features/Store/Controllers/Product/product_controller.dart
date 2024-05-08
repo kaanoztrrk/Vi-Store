@@ -56,6 +56,28 @@ class ProductController extends GetxController {
     }
   }
 
+  Future<List<ProductModel>> fetchAllFeaturedProducts() async {
+    try {
+      // Ürünleri getir
+      final products = await productRepository.getFeaturedProducts();
+
+      // isLoading değerini false olarak ayarla
+      isLoading.value = false;
+
+      // Ürünleri döndür
+      return products;
+    } catch (e) {
+      // Hata durumunda SnackBar göster
+      ViLoaders.errorSnacBar(title: 'Oh Snap!', message: e.toString());
+
+      // isLoading değerini false olarak ayarla
+      isLoading.value = false;
+
+      // Boş liste döndür
+      return [];
+    }
+  }
+
   // Ürün fiyatını veya varyasyon fiyat aralığını al
   String getProductPrice(ProductModel product) {
     if (product.productType == ProductType.single.toString()) {

@@ -39,6 +39,48 @@ class ProductRepository extends GetxController {
     }
   }
 
+  Future<List<ProductModel>> getAllFeaturedProducts() async {
+    try {
+      final snapshot = await _db
+          .collection('Products')
+          .where('IsFeatured', isEqualTo: true)
+          .get();
+      return snapshot.docs.map((e) => ProductModel.fromSnapshot(e)).toList();
+    } on FirebaseException catch (e) {
+      // Firebase hatalarını daha spesifik bir şekilde işle
+      throw ViFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      // Platform hatalarını daha spesifik bir şekilde işle
+      throw ViPlatformException(e.code).message;
+    } catch (e) {
+      // Diğer hataları daha spesifik bir şekilde işle
+      // Örneğin, network hatası, veritabanı hatası gibi...
+      //  print(e);
+      throw 'Something went wrong: $e';
+    }
+  }
+
+  Future<List<ProductModel>> fetchProductsByQuery(Query query) async {
+    try {
+      final querySnapshot = await query.get();
+      final List<ProductModel> productList = querySnapshot.docs
+          .map((doc) => ProductModel.fromQuerySnapshot(doc))
+          .toList();
+      return productList;
+    } on FirebaseException catch (e) {
+      // Firebase hatalarını daha spesifik bir şekilde işle
+      throw ViFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      // Platform hatalarını daha spesifik bir şekilde işle
+      throw ViPlatformException(e.code).message;
+    } catch (e) {
+      // Diğer hataları daha spesifik bir şekilde işle
+      // Örneğin, network hatası, veritabanı hatası gibi...
+      //  print(e);
+      throw 'Something went wrong. Please try again.';
+    }
+  }
+
   // Upload dummy data to the cloud firebase
   Future<void> uploadDummyData(List<ProductModel> products) async {
     try {

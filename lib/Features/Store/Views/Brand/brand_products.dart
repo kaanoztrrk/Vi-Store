@@ -22,7 +22,9 @@ class BrandProducts extends StatelessWidget {
               children: [
                 ViBrandCard(showBorder: true),
                 SizedBox(height: ViSizes.spaceBtwSections),
-                ViSortableProducts(),
+                ViSortableProducts(
+                  products: [],
+                ),
               ],
             )),
       ),
